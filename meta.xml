@@ -12,8 +12,20 @@
 
 	<!-- Client -->
 	<script src="client/init.lua" type="client"/>
+	<script src="client/exports.lua" type="client"/>
 	<script src="client/classes/CameraManager.lua" type="client"/>
 	
 		<!-- For testing only - remove for production -->
 		<script src="client/test.lua" type="client"/>
+	
+	<!-- Allow meta.xml reading/writing -->
+	<file src="meta.xml" />
+	
+	<!-- Exports -->
+	<export function="addCameraScene" type="client" />
+	<export function="setAutoplayEnabled" type="client" />
+	<export function="setCameraFadeDuration" type="client" />
+	<export function="getCurrentScene" type="client" />
+	<export function="startNextScene" type="client" />
+	<export function="stopCurrentScene" type="client" />
 </meta>

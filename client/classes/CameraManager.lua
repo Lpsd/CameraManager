@@ -36,6 +36,8 @@ function CameraManager:constructor()
 	
 	addEvent("addCameraScene", true)
 	addEventHandler("addCameraScene", root, self.m_fAddCameraScene)
+	
+	return self
 end
 
 function CameraManager:destructor()
