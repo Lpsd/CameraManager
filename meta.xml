@@ -1,0 +1,19 @@
+<meta>
+	<info author="LopSided" version="0.1" type="script" name="Camera manager" />
+	
+	<!-- Settings / Configuration -->
+	<oop>true</oop>
+	
+	<!-- Shared -->
+	<script src="shared/utils.lua" type="shared"/>
+	<script src="shared/classlib.lua" type="shared"/>
+	<script src="shared/classes/BaseClass.lua" type="shared" />
+	<script src="shared/classes/Instance.lua" type="shared" />
+
+	<!-- Client -->
+	<script src="client/init.lua" type="client"/>
+	<script src="client/classes/CameraManager.lua" type="client"/>
+	
+		<!-- For testing only - remove for production -->
+		<script src="client/test.lua" type="client"/>
+</meta>
