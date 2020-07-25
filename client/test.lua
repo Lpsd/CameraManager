@@ -49,7 +49,7 @@ local cameraScenes = {
 	}			
 }
 
-function importCameraScenes()
+function testCameraScenes()
 	for i, scene in ipairs(cameraScenes) do
 		local from = scene.from
 		local to = scene.to
@@ -57,10 +57,4 @@ function importCameraScenes()
 		CameraManager:getInstance():smoothMoveCamera(from.position:getX(), from.position:getY(), from.position:getZ(), from.rotation:getX(), from.rotation:getY(), from.rotation:getZ(), to.position:getX(), to.position:getY(), to.position:getZ(), to.rotation:getX(), to.rotation:getY(), to.rotation:getZ(), scene.duration, from.roll, to.roll, from.fov, to.fov, "InOutQuad", "InOutQuad", "InOutQuad", scene.fade)
 	end
 end
-
-function init()
-	-- Import camera scenes twice, intentional
-	importCameraScenes()
-	importCameraScenes()
-end
-addEventHandler("onCameraManagerInitialized", root, init)
+addEventHandler("onCameraManagerInitialized", root, testCameraScenes)
